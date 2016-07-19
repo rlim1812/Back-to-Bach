@@ -12,6 +12,8 @@
 		37667BA11D3E879E0097F4AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37667B9F1D3E879E0097F4AE /* Main.storyboard */; };
 		37667BA31D3E879E0097F4AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37667BA21D3E879E0097F4AE /* Assets.xcassets */; };
 		37667BA61D3E879E0097F4AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37667BA41D3E879E0097F4AE /* LaunchScreen.storyboard */; };
+		37667BAE1D3E87D60097F4AE /* bach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 37667BAD1D3E87D60097F4AE /* bach.mp3 */; };
+		37667BB01D3E89010097F4AE /* BachImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37667BAF1D3E89010097F4AE /* BachImage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		37667BA21D3E879E0097F4AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37667BA51D3E879E0097F4AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37667BA71D3E879E0097F4AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37667BAD1D3E87D60097F4AE /* bach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bach.mp3; path = "../../../../Downloads/Back To Bach/Back To Bach/bach.mp3"; sourceTree = "<group>"; };
+		37667BAF1D3E89010097F4AE /* BachImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BachImage.jpg; path = ../../../../Downloads/BachImage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 			children = (
 				37667B9B1D3E879E0097F4AE /* AppDelegate.swift */,
 				37667B9D1D3E879E0097F4AE /* ViewController.swift */,
+				37667BAD1D3E87D60097F4AE /* bach.mp3 */,
 				37667B9F1D3E879E0097F4AE /* Main.storyboard */,
+				37667BAF1D3E89010097F4AE /* BachImage.jpg */,
 				37667BA21D3E879E0097F4AE /* Assets.xcassets */,
 				37667BA41D3E879E0097F4AE /* LaunchScreen.storyboard */,
 				37667BA71D3E879E0097F4AE /* Info.plist */,
@@ -123,6 +129,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37667BAE1D3E87D60097F4AE /* bach.mp3 in Resources */,
+				37667BB01D3E89010097F4AE /* BachImage.jpg in Resources */,
 				37667BA61D3E879E0097F4AE /* LaunchScreen.storyboard in Resources */,
 				37667BA31D3E879E0097F4AE /* Assets.xcassets in Resources */,
 				37667BA11D3E879E0097F4AE /* Main.storyboard in Resources */,

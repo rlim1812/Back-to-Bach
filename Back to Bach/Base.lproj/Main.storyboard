@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Back_to_Bach" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Aa-3b-fFk">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0eG-Pg-R3q"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Back to Bach" id="8y6-HB-iCf">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="l0S-k3-H1I">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="FxP-oS-njW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BachImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8Me-5t-ZYW">
+                                <rect key="frame" x="162" y="125" width="276" height="268"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="276" id="qUN-ni-KYj"/>
+                                    <constraint firstAttribute="height" constant="268" id="xoh-IS-x7i"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qjr-BD-3wR">
+                                <rect key="frame" x="190" y="437" width="220" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="216" id="E1z-Tq-GNz"/>
+                                    <constraint firstAttribute="height" constant="30" id="Phu-Qm-hur"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="adjustVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="ucr-uZ-gBq"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oMB-mS-qNy">
+                                <rect key="frame" x="190" y="495" width="220" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4IP-lE-MPN"/>
+                                    <constraint firstAttribute="width" constant="216" id="as4-wR-vjd"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="scrub:" destination="BYZ-38-t0r" eventType="valueChanged" id="FBf-kM-t7X"/>
+                                </connections>
+                            </slider>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFu-HE-T3k">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" systemItem="pause" id="62w-gM-8bb">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="d2p-7b-6Xc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ttm-e4-eVt"/>
+                                    <barButtonItem title="Stop" id="L7I-4a-Efz">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="zIq-Jk-K8y"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Aa-3b-fFk" secondAttribute="trailing" constant="-20" id="4J0-XU-15o"/>
+                            <constraint firstItem="8Me-5t-ZYW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4VY-Fb-wkv"/>
+                            <constraint firstItem="qjr-BD-3wR" firstAttribute="top" secondItem="8Me-5t-ZYW" secondAttribute="bottom" constant="44" id="4Vm-Ni-dLV"/>
+                            <constraint firstItem="9Aa-3b-fFk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5wR-M1-qbJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GFu-HE-T3k" secondAttribute="trailing" constant="-20" id="Bpl-66-xf6"/>
+                            <constraint firstItem="qjr-BD-3wR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CUY-2P-4Wl"/>
+                            <constraint firstItem="8Me-5t-ZYW" firstAttribute="top" secondItem="9Aa-3b-fFk" secondAttribute="bottom" constant="53" id="O8C-WO-DSB"/>
+                            <constraint firstItem="9Aa-3b-fFk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="WDc-C6-gIG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GFu-HE-T3k" secondAttribute="bottom" id="jHC-a6-uAP"/>
+                            <constraint firstItem="oMB-mS-qNy" firstAttribute="top" secondItem="qjr-BD-3wR" secondAttribute="bottom" constant="28" id="m3U-JY-Uy7"/>
+                            <constraint firstItem="oMB-mS-qNy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r2E-l3-A7g"/>
+                            <constraint firstItem="GFu-HE-T3k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ww5-3C-Fh7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrubSlider" destination="oMB-mS-qNy" id="BYp-LC-3fQ"/>
+                        <outlet property="volumeSlider" destination="qjr-BD-3wR" id="LPJ-5S-sbZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="306"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BachImage.jpg" width="480" height="591"/>
+    </resources>
 </document>
